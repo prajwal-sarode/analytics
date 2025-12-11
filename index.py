@@ -3,6 +3,7 @@ import dash_bootstrap_components as dbc
 import pandas as pd
 
 from app import app
+server = app.server
 from data.engine import load_data
 from components.sidebar import create_sidebar
 from config import BG_COLOR, CARD_BG, TEXT_MAIN, TEXT_SUB, PRIMARY, SIDEBAR_BG
