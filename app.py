@@ -13,7 +13,7 @@ app = dash.Dash(
     external_stylesheets=[dbc.themes.BOOTSTRAP],
     # **3. CRITICAL LINE: Tell Dash its base path.**
     requests_pathname_prefix=APP_PATH_PREFIX,
-    url_base_pathname=APP_PATH_PREFIX
+    routes_pathname_prefix=APP_PATH_PREFIX,
 ) 
 
 app.config.suppress_callback_exceptions = True
