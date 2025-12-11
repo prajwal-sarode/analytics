@@ -9,12 +9,12 @@ def create_sidebar(zones, grades):
             html.Span("Workforce Intelligence", style={'color': TEXT_SUB, 'fontSize': '0.75rem'})
         ], className="mb-5"),
         
-        html.Ul([
-            html.Li(dcc.Link([html.Span("📊", className="me-2"), "Overview"], href="/", className="nav-link"), className="nav-item"),
-            html.Li(dcc.Link([html.Span("🌏", className="me-2"), "Site Intel"], href="/sites", className="nav-link"), className="nav-item"),
-            html.Li(dcc.Link([html.Span("📈", className="me-2"), "Trends"], href="/trends", className="nav-link"), className="nav-item"),
-            html.Li(dcc.Link([html.Span("👥", className="me-2"), "Talent"], href="/talent", className="nav-link"), className="nav-item"),
-        ], className="nav flex-column nav-pills"),
+        dbc.Nav([
+            dbc.NavLink([html.Span("📊", className="me-2"), "Overview"], href="/", active="exact"),
+            dbc.NavLink([html.Span("🌏", className="me-2"), "Site Intel"], href="/sites", active="exact"),
+            dbc.NavLink([html.Span("📈", className="me-2"), "Trends"], href="/trends", active="exact"),
+            dbc.NavLink([html.Span("👥", className="me-2"), "Talent"], href="/talent", active="exact"),
+        ], vertical=True, pills=True),
 
         html.Hr(style={'margin': '2rem 0', 'borderColor': '#E2E8F0'}),
         
