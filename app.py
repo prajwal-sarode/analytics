@@ -12,7 +12,7 @@ app = dash.Dash(
     __name__, 
     external_stylesheets=[dbc.themes.BOOTSTRAP],
     # **3. CRITICAL LINE: Tell Dash its base path.**
-    requests_pathname_prefix=APP_PATH_PREFIX
+    requests_pathname_prefix=APP_PATH_PREFIX,
     url_base_pathname=APP_PATH_PREFIX
 ) 
 
