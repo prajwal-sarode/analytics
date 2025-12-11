@@ -60,6 +60,8 @@ app.index_string = f'''
     [Input("url", "pathname"), Input("zone-filter", "value"), Input("grade-filter", "value")]
 )
 def display_page(pathname, sel_zones, sel_grades):
+    print(f"DEBUG: Pathname received: {pathname}", file=sys.stderr)
+    sys.stderr.flush()
     # Filter Data Global Logic
     dff = df.copy()
     if sel_zones: dff = dff[dff['Zone'].isin(sel_zones)]
